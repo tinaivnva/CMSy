@@ -1,10 +1,10 @@
-﻿using CafeManagementSystem.Views;
+﻿using CMSy.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Cafe_Management_System.Models
+namespace CMSy.Models
 {
     public class Receipt
     {
@@ -26,12 +26,12 @@ namespace Cafe_Management_System.Models
         }
         public override string ToString()
         {
-            double sumOfProductPricces = products.Sum(product => product.Price);
+            double sumOfProductPrices = products.Sum(product => product.Price);
             string receipt = $"Reciept of Table№{id_Table}"
- + Environment.NewLine
- + $"Total Price: {sumOfProductPricces}"
- + Environment.NewLine
- + $"Products:";
+            + Environment.NewLine
+            + $"Total Price: {sumOfProductPrices}"
+            + Environment.NewLine
+            + $"Products:";
             foreach (var product in products)
             {
                 receipt += Environment.NewLine + product.ToString();

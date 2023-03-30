@@ -1,6 +1,6 @@
 ﻿using System.Xml.Linq;
 
-namespace CafeManagementSystem.Views
+namespace CMSy.Models
 {
     public class Product
     {

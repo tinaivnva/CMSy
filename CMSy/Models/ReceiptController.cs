@@ -1,12 +1,11 @@
-﻿using Cafe_Management_System.Models;
-using CafeManagementSystem.Views;
+﻿using CMSy.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 
-namespace Cafe_Management_System.Controllers
+namespace CMSy.Models
 {
     public class ReceiptController : Receipt
     {
@@ -32,7 +31,7 @@ namespace Cafe_Management_System.Controllers
 
             return $"This table has ordered {productName}.";
         }
-        
+
         public string CheckoutCommand(List<string> args)
         {
             int idTable = int.Parse(args[0]);
@@ -43,11 +42,6 @@ namespace Cafe_Management_System.Controllers
 
             double sumOfProductPrices = products.Sum(product => product.Price);
             return $"The total of this table is {sumOfProductPrices}";
-        }
-        public ActionResult ProcessInfoCommand()
-        {
-            
-            return View();
         }
     }
 }
