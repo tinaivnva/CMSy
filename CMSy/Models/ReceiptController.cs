@@ -7,7 +7,7 @@ using System.Web;
 
 namespace CMSy.Models
 {
-    public class ReceiptController : Receipt
+    public class ReceiptController 
     {
         private List<Receipt> receipts;
         private List<Product> products;

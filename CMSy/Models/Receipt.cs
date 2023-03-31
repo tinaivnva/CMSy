@@ -26,8 +26,9 @@ namespace CMSy.Models
         }
         public override string ToString()
         {
+            int idTable = id_Table;
             double sumOfProductPrices = products.Sum(product => product.Price);
-            string receipt = $"Reciept of Table№{id_Table}"
+            string receipt = $"Reciept of Table№{idTable}"
             + Environment.NewLine
             + $"Total Price: {sumOfProductPrices}"
             + Environment.NewLine
