@@ -10,10 +10,17 @@ namespace CMSy.Models
     {
         private List<Product> products;
         private int idTable;
+        private int order_id;
         public int id_Table
         {
             get { return idTable; }
-            private set { idTable = value; }
+            set { idTable = value; }
+        }
+
+        public int OrderId 
+        {
+            get { return order_id; }
+            set { order_id = value; }
         }
         public Receipt(int idTable)
         {
@@ -27,8 +34,11 @@ namespace CMSy.Models
         public override string ToString()
         {
             int idTable = id_Table;
+            int order_id = OrderId;
             double sumOfProductPrices = products.Sum(product => product.Price);
             string receipt = $"Reciept of Table№{idTable}"
+            + Environment.NewLine
+            + $"Order №{order_id}"
             + Environment.NewLine
             + $"Total Price: {sumOfProductPrices}"
             + Environment.NewLine
