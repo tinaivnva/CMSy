@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<MVCDemoDbContext>(c => 
-    c.UseMySQL("Server=localhost;Database=tina;Uid=codeUser;Pwd=1234;"));
+    c.UseMySQL("Server=127.0.0.1;Database=tina;Uid=root;Pwd=TinaITsveti;"));
 
 var app = builder.Build();
 
