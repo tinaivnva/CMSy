@@ -7,10 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Remove="Migrations\**" />
     <Content Remove="Migrations\**" />
     <EmbeddedResource Remove="Migrations\**" />
     <None Remove="Migrations\**" />
+=======
+    <Content Remove="Views\Shared\AddOrder.cshtml" />
+>>>>>>> 3995bb7e4ee54bfcab4e24ab2f141e355f065394
   </ItemGroup>
 
   <ItemGroup>
