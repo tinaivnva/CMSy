@@ -46,30 +46,5 @@ namespace CMSy.Models
             IsVegan = is_vegan;
         }
 
-        public override string ToString()
-        {
-            string productName = ProductName;
-            string is_cold = "";
-            if (IsCold)
-            {
-                is_cold = "hot";
-            }
-            else
-            {
-                is_cold = "cold";
-            }
-            string is_vegan = "";
-            if (IsVegan)
-            {
-                is_vegan = "vegan";
-            }
-            else
-            {
-                is_vegan = "not vegan";
-            }
-            string prodctTypeString = $"{productName} is {is_cold} and {is_vegan}";
-            return prodctTypeString;
-        }
-
     }
 }

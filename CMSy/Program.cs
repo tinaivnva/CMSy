@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<MVCDemoDbContext>(c => 
+builder.Services.AddDbContext<MVCOrderDbContext>(c => 
     c.UseMySQL("Server=localhost;Database=tina;Uid=codeUser;Pwd=1234;"));
 
 var app = builder.Build();
